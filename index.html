@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table选项卡</title>
+    <style>
+        /* 初始化 */
+        * {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        /* 整体 */
+        .wapper {
+            width: 1000px;
+            position: absolute;
+            margin-top: 20px;
+            left: calc(50%);
+            transform: translateX(-50%);
+        }
+        /* 头部 */
+        .wapper .father {
+            display: flex;
+        }
+
+        .wapper .father .top {
+            flex: auto;
+            text-align: center;
+            padding: 10px 0;
+            background-color: aqua;
+            cursor: pointer;
+        }
+
+        .wapper .father .top a {
+            display: block;
+        }
+        /* 内容 */
+        .wapper .count {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        .wapper .count div {
+            flex: 1 0 100%;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border: 1px solid black;
+            box-sizing: border-box;
+            border-collapse: collapse;
+            margin-bottom: -1px;
+        }
+
+        .wapper .count .on:target {
+            font-weight: bold;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wapper">
+        <div class="father">
+            <div class="top"><a href="#on1">1</a></div>
+            <div class="top"><a href="#on2">2</a></div>
+            <div class="top"><a href="#on3">3</a></div>
+            <div class="top"><a href="#on4">4</a></div>
+            <div class="top"><a href="#on5">5</a></div>
+        </div>
+
+
+        <div class="count">
+            <div class="on" id="on1">第1块区域</div>
+            <div class="on" id="on2">第2块区域</div>
+            <div class="on" id="on3">第3块区域</div>
+            <div class="on" id="on4">第4块区域</div>
+            <div class="on" id="on5">第5块区域</div>
+        </div>
+    </div>
+</body>
+
+</html>
